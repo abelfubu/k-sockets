@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k-sockets-server
+  labels:
+    app: k-sockets-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k-sockets-server
+  template:
+    metadata:
+      labels:
+        app: k-sockets-server
+    spec:
+      containers:
+        - name: k-sockets-server
+          image: k-sockets-server:latest # Reference to your local image
+          ports:
+            - containerPort: 8000 # Change to the port your server is using

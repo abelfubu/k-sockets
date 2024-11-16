@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: CommitMono Nerd Font;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color-scheme: light;
+
+  &.dark {
+    color-scheme: dark;
+    color: #ddd;
+    background: #232323;
+  }
+}
+
+svg {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
